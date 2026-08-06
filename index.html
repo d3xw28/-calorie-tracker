@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -423,6 +423,87 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:va
 .notification-banner{position:fixed;top:0;left:50%;transform:translateX(-50%);max-width:480px;width:100%;background:var(--card2);border-bottom:1px solid var(--border2);padding:14px 20px;z-index:400;display:flex;align-items:center;gap:12px;animation:slideDown 0.3s ease;box-shadow:var(--shadow-lg);}
 @keyframes slideDown{from{transform:translateX(-50%) translateY(-100%);}to{transform:translateX(-50%) translateY(0);}}
 .notification-text{font-size:14px;font-weight:600;color:var(--text);}
+
+/* STATS / PB TRACKER */
+.stats-hero{background:linear-gradient(135deg,rgba(251,113,133,0.1),rgba(251,113,133,0.03));margin:14px 16px;border-radius:var(--radius);padding:20px;border:1px solid rgba(251,113,133,0.2);}
+.stats-hero-title{font-size:24px;font-weight:900;background:linear-gradient(135deg,var(--rose),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-0.5px;margin-bottom:4px;}
+.stats-hero-sub{font-size:13px;color:var(--text3);font-weight:500;}
+.pb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 16px 12px;}
+.pb-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;}
+.pb-card:active{transform:scale(0.97);}
+.pb-card.has-pb{border-color:rgba(251,113,133,0.3);background:rgba(251,113,133,0.04);}
+.pb-card-icon{font-size:26px;margin-bottom:8px;}
+.pb-card-name{font-size:13px;font-weight:700;color:var(--text2);margin-bottom:6px;}
+.pb-card-weight{font-size:24px;font-weight:900;color:var(--rose);letter-spacing:-0.5px;line-height:1;}
+.pb-card-unit{font-size:13px;color:var(--text3);margin-left:3px;}
+.pb-card-date{font-size:11px;color:var(--text3);margin-top:4px;}
+.pb-card-history{font-size:11px;color:var(--text3);margin-top:6px;border-top:1px solid var(--border);padding-top:6px;}
+.pb-new-badge{position:absolute;top:8px;right:8px;background:linear-gradient(135deg,var(--neon),var(--neon2));color:#000;font-size:9px;font-weight:800;padding:3px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:0.5px;}
+.add-pb-btn{width:calc(100% - 32px);margin:0 16px 12px;padding:14px;background:rgba(251,113,133,0.08);border:1px dashed rgba(251,113,133,0.3);border-radius:var(--radius-sm);color:var(--rose);font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
+.pr-celebration{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:600;display:flex;align-items:center;justify-content:center;flex-direction:column;backdrop-filter:blur(8px);}
+.pr-celebration-icon{font-size:80px;animation:celebBounce 0.6s ease infinite alternate;}
+.pr-celebration-title{font-size:32px;font-weight:900;background:linear-gradient(135deg,var(--neon),var(--electric));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-top:16px;letter-spacing:-1px;}
+.pr-celebration-sub{font-size:16px;color:var(--text2);margin-top:8px;font-weight:500;}
+.pr-celebration-weight{font-size:48px;font-weight:900;color:var(--rose);margin-top:12px;letter-spacing:-2px;}
+.pr-close-btn{margin-top:24px;padding:14px 32px;background:linear-gradient(135deg,var(--neon),var(--neon2));color:#000;border:none;border-radius:var(--radius-sm);font-size:16px;font-weight:800;cursor:pointer;}
+@keyframes celebBounce{from{transform:scale(1);}to{transform:scale(1.15);}}
+
+/* MACRO CALCULATOR */
+.macro-calc-card{background:var(--card);margin:0 16px 12px;border-radius:var(--radius);padding:18px;border:1px solid var(--border);}
+.macro-calc-title{font-size:13px;font-weight:700;color:var(--electric);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:16px;}
+.calc-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.calc-label{font-size:14px;font-weight:600;color:var(--text2);}
+.calc-input{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-xs);padding:9px 14px;font-size:15px;font-weight:700;color:var(--text);text-align:right;outline:none;width:120px;}
+.calc-input:focus{border-color:var(--electric);}
+.calc-select{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-xs);padding:9px 14px;font-size:14px;font-weight:600;color:var(--text);outline:none;width:160px;-webkit-appearance:none;}
+.calc-result{background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(0,212,255,0.03));border:1px solid var(--border2);border-radius:var(--radius-sm);padding:16px;margin-top:14px;}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.calc-result-row:last-child{margin-bottom:0;}
+.calc-result-label{font-size:13px;color:var(--text3);font-weight:600;}
+.calc-result-val{font-size:18px;font-weight:900;color:var(--electric);}
+.calc-apply-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--electric),var(--electric2));color:#000;border:none;border-radius:var(--radius-sm);font-size:15px;font-weight:800;cursor:pointer;margin-top:14px;}
+
+/* FRIENDS / SOCIAL */
+.friends-hero{background:linear-gradient(135deg,rgba(139,92,246,0.1),rgba(0,212,255,0.05));margin:14px 16px;border-radius:var(--radius);padding:20px;border:1px solid rgba(139,92,246,0.2);}
+.friends-hero-title{font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--electric));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;}
+.my-code-card{background:var(--card);margin:0 16px 12px;border-radius:var(--radius);padding:16px 18px;border:1px solid var(--border);}
+.my-code-label{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px;}
+.my-code{font-size:32px;font-weight:900;letter-spacing:6px;color:var(--electric);text-align:center;padding:14px;background:var(--card2);border-radius:var(--radius-sm);border:1px solid var(--border2);}
+.copy-code-btn{width:100%;padding:12px;background:var(--electric-glow);border:1px solid var(--border2);border-radius:var(--radius-sm);color:var(--electric);font-size:14px;font-weight:700;cursor:pointer;margin-top:10px;}
+.add-friend-row{display:flex;gap:10px;padding:0 16px;margin-bottom:12px;}
+.add-friend-input{flex:1;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);color:var(--text);font-size:15px;font-weight:600;outline:none;}
+.add-friend-input:focus{border-color:var(--purple);}
+.add-friend-btn{padding:12px 18px;background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;border:none;border-radius:var(--radius-sm);font-size:14px;font-weight:800;cursor:pointer;}
+.friend-card{background:var(--card);margin:0 16px 10px;border-radius:var(--radius);padding:16px 18px;border:1px solid var(--border);display:flex;align-items:center;gap:14px;}
+.friend-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--electric));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#000;flex-shrink:0;}
+.friend-name{font-size:15px;font-weight:800;color:var(--text);}
+.friend-stats{font-size:12px;color:var(--text3);margin-top:3px;}
+.friend-streak{font-size:14px;font-weight:800;color:var(--amber);margin-left:auto;text-align:right;}
+.leaderboard-card{background:var(--card);margin:0 16px 12px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+.leaderboard-header{background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(0,212,255,0.05));padding:14px 18px;font-size:13px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.8px;border-bottom:1px solid var(--border);}
+.leaderboard-row{display:flex;align-items:center;padding:13px 18px;border-bottom:1px solid var(--border);gap:12px;}
+.leaderboard-row:last-child{border-bottom:none;}
+.leaderboard-pos{font-size:18px;font-weight:900;color:var(--text3);width:28px;text-align:center;}
+.leaderboard-pos.gold{color:var(--amber);}
+.leaderboard-pos.silver{color:#aaa;}
+.leaderboard-pos.bronze{color:#CD7F32;}
+.leaderboard-name{flex:1;font-size:14px;font-weight:700;color:var(--text);}
+.leaderboard-val{font-size:14px;font-weight:800;color:var(--electric);}
+
+/* WEEKLY REPORT */
+.report-card{background:var(--card);margin:0 16px 12px;border-radius:var(--radius);padding:18px;border:1px solid var(--border);}
+.report-title{font-size:13px;font-weight:700;color:var(--electric);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:14px;}
+.report-stat-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);}
+.report-stat-row:last-child{border-bottom:none;}
+.report-stat-label{font-size:14px;color:var(--text2);font-weight:500;}
+.report-stat-val{font-size:16px;font-weight:800;color:var(--electric);}
+
+/* PB SHEET */
+.pb-sheet-exercise{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;}
+.pb-sheet-exercise:last-child{border-bottom:none;}
+.pb-sheet-exercise:active{opacity:0.7;}
+.pb-sheet-icon{font-size:24px;width:40px;text-align:center;}
+.pb-sheet-name{font-size:14px;font-weight:700;color:var(--text);}
 </style>
 </head>
 <body>
@@ -630,11 +711,33 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:va
 
 <nav class="bottom-nav">
   <button class="nav-item active" id="nav-diary" onclick="switchScreen('diary')"><div class="nav-icon">📋</div><div class="nav-label">Diary</div><div class="nav-dot"></div></button>
-  <button class="nav-item" id="nav-weight" onclick="switchScreen('weight')"><div class="nav-icon">⚖️</div><div class="nav-label">Weight</div><div class="nav-dot"></div></button>
   <button class="nav-item" id="nav-gym" onclick="switchScreen('gym')"><div class="nav-icon">🏋️</div><div class="nav-label">Workout</div><div class="nav-dot"></div></button>
-  <button class="nav-item" id="nav-ai" onclick="switchScreen('ai')"><div class="nav-icon">🤖</div><div class="nav-label">AI Coach</div><div class="nav-dot"></div></button>
+  <button class="nav-item" id="nav-stats" onclick="switchScreen('stats')"><div class="nav-icon">📈</div><div class="nav-label">Stats</div><div class="nav-dot"></div></button>
+  <button class="nav-item" id="nav-friends" onclick="switchScreen('friends')"><div class="nav-icon">👥</div><div class="nav-label">Friends</div><div class="nav-dot"></div></button>
   <button class="nav-item" id="nav-goals" onclick="switchScreen('goals')"><div class="nav-icon">⚙️</div><div class="nav-label">Settings</div><div class="nav-dot"></div></button>
 </nav>
+</div>
+
+
+<!-- ADD PB SHEET -->
+<div class="sheet-overlay" id="pb-sheet" onclick="closePBSheet(event)">
+  <div class="sheet">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header"><div class="sheet-title" id="pb-sheet-title">Log Personal Best</div><button class="sheet-close" onclick="closePBSheet()">✕</button></div>
+    <div class="sheet-body">
+      <div class="field-label">Exercise</div>
+      <div id="pb-exercise-list" style="max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;"></div>
+      <input class="field-input" type="text" id="pb-exercise-name" placeholder="Or type exercise name…" style="margin-top:8px;">
+      <div class="field-label">Weight</div>
+      <div style="display:flex;gap:10px;align-items:center;">
+        <input class="field-input" type="number" id="pb-weight" placeholder="e.g. 100" inputmode="decimal" style="flex:1;">
+        <div class="unit-toggle" style="width:110px;flex-shrink:0;"><div class="unit-opt active" id="pb-kg-opt" onclick="setPBUnit('kg')">kg</div><div class="unit-opt" id="pb-lbs-opt" onclick="setPBUnit('lbs')">lbs</div></div>
+      </div>
+      <div class="field-label">Reps (optional)</div>
+      <input class="field-input" type="number" id="pb-reps" placeholder="e.g. 1" inputmode="numeric">
+    </div>
+    <div class="sheet-actions"><button class="btn btn-secondary" onclick="closePBSheet()">Cancel</button><button class="btn btn-primary" onclick="savePB()">Save PB 🏆</button></div>
+  </div>
 </div>
 
 <!-- ADD FOOD SHEET -->
@@ -824,7 +927,7 @@ onAuthStateChanged(auth,async user=>{
     document.getElementById('profile-avatar').textContent=fn[0].toUpperCase();
     const savedKey=localStorage.getItem('ff_gemini_key');
     if(savedKey)document.getElementById('gemini-key-input').value=savedKey;
-    await loadGoals();render();scheduleNotification();
+    await loadGoals();render();setupSmartNotifications();scheduleWeeklyReport();
   }else{currentUser=null;loading.style.display='none';document.getElementById('main-app').style.display='none';document.getElementById('screen-login').classList.add('active');}
 });
 
@@ -1080,7 +1183,7 @@ function startRestTimer(exIdx){
 }
 window.stopRestTimer=function(exIdx){if(restTimers[exIdx])clearInterval(restTimers[exIdx]);const restEl=document.getElementById('rest-'+exIdx);if(restEl)restEl.style.display='none';}
 
-window.saveWorkout=function(){
+window.saveWorkout=function(){checkWorkoutForPRs();
   const totalSets=currentWorkout.reduce((s,e)=>s+e.sets.filter(set=>set.done).length,0);
   if(totalSets===0){showToast('Complete at least one set first');return;}
   const workouts=JSON.parse(localStorage.getItem('ff_workouts_'+currentUser?.uid)||'[]');
@@ -1176,7 +1279,7 @@ function addBotMessage(text){const div=document.createElement('div');div.classNa
 function scrollChat(){const scroll=document.getElementById('ai-chat-scroll');setTimeout(()=>scroll.scrollTop=scroll.scrollHeight,100);}
 
 // SCREENS
-window.switchScreen=function(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));document.getElementById('screen-'+id).classList.add('active');const nav=document.getElementById('nav-'+id);if(nav)nav.classList.add('active');if(id==='goals'){renderSavedFoods();}if(id==='weight')renderWeightScreen();if(id==='ai'){const el=document.getElementById('ai-welcome-name');if(el)el.textContent=currentUser?.displayName?.split(' ')[0]||'there';}if(id==='diary')renderWeekChart();}
+window.switchScreen=function(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));document.getElementById('screen-'+id).classList.add('active');const nav=document.getElementById('nav-'+id);if(nav)nav.classList.add('active');if(id==='goals'){renderSavedFoods();}if(id==='weight')renderWeightScreen();if(id==='ai'){const el=document.getElementById('ai-welcome-name');if(el)el.textContent=currentUser?.displayName?.split(' ')[0]||'there';}if(id==='diary')renderWeekChart();if(id==='stats'){renderPBGrid();renderWeeklyReport();}if(id==='friends'){renderFriendsScreen();}}
 window.renderSavedFoods=function(){const saved=getSavedFoods();const el=document.getElementById('saved-foods-list');if(!saved.length){el.innerHTML='<div class="empty-meal" style="padding:14px 18px;">Foods you log appear here for quick re-use</div>';return;}el.innerHTML=saved.map((f,i)=>`<div class="saved-food-row"><div><div style="font-size:14px;font-weight:700;color:var(--text)">${esc(f.name)}</div><div style="font-size:12px;color:var(--text3)">${Math.round(f.kcal)} kcal · ${esc(f.serving||'')}</div></div><button class="saved-food-add" onclick="quickAddSaved(${i})">+ Add</button></div>`).join('');}
 window.quickAddSaved=function(idx){const f=getSavedFoods()[idx];openSheet(activeMeal||'snacks');setTimeout(()=>fillForm(f),100);}
 
@@ -1184,6 +1287,235 @@ window.quickAddSaved=function(idx){const f=getSavedFoods()[idx];openSheet(active
 let toastTimer;
 window.showToast=function(msg,success=false){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show'+(success?' success':'');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2600);}
 function showToast(msg,s){window.showToast(msg,s);}
+
+// ===== PERSONAL BESTS =====
+const DEFAULT_LIFTS = [
+  {id:'bench',name:'Bench Press',icon:'🏋️'},
+  {id:'squat',name:'Squat',icon:'🦵'},
+  {id:'deadlift',name:'Deadlift',icon:'💀'},
+  {id:'ohp',name:'Overhead Press',icon:'🤷'},
+  {id:'row',name:'Barbell Row',icon:'🔙'},
+  {id:'pullup',name:'Pull-ups',icon:'💪'},
+  {id:'curl',name:'Bicep Curl',icon:'💪'},
+  {id:'rdl',name:'Romanian Deadlift',icon:'🦵'},
+];
+
+function getPBs(){return JSON.parse(localStorage.getItem('ff_pbs_'+currentUser?.uid)||'{}');}
+function savePBs(pbs){localStorage.setItem('ff_pbs_'+currentUser?.uid,JSON.stringify(pbs));}
+let pbUnit='kg';
+window.setPBUnit=function(u){pbUnit=u;document.getElementById('pb-kg-opt').classList.toggle('active',u==='kg');document.getElementById('pb-lbs-opt').classList.toggle('active',u==='lbs');}
+
+window.openAddPBSheet=function(){
+  document.getElementById('pb-exercise-name').value='';
+  document.getElementById('pb-weight').value='';
+  document.getElementById('pb-reps').value='';
+  const list=document.getElementById('pb-exercise-list');
+  list.innerHTML=DEFAULT_LIFTS.map(l=>`<div class="pb-sheet-exercise" onclick="selectPBExercise('${l.name}')"><span class="pb-sheet-icon">${l.icon}</span><span class="pb-sheet-name">${l.name}</span></div>`).join('');
+  document.getElementById('pb-sheet').classList.add('open');
+}
+window.closePBSheet=function(e){if(!e||e.target===document.getElementById('pb-sheet'))document.getElementById('pb-sheet').classList.remove('open');}
+window.selectPBExercise=function(name){document.getElementById('pb-exercise-name').value=name;}
+window.savePB=function(){
+  const name=document.getElementById('pb-exercise-name').value.trim();
+  let weight=parseFloat(document.getElementById('pb-weight').value);
+  const reps=parseInt(document.getElementById('pb-reps').value)||1;
+  if(!name||!weight)return;
+  if(pbUnit==='lbs')weight=Math.round(weight/2.205*10)/10;
+  const pbs=getPBs();
+  const prev=pbs[name];
+  const isNew=!prev||weight>prev.weight;
+  pbs[name]={weight,reps,unit:'kg',date:new Date().toISOString(),history:[...(prev?.history||[]),{weight,reps,date:new Date().toISOString()}].slice(-20)};
+  savePBs(pbs);
+  document.getElementById('pb-sheet').classList.remove('open');
+  renderPBGrid();
+  if(isNew&&prev)celebratePR(name,weight);
+  showToast(isNew?'New PB saved! 🏆':'PB updated ✓',true);
+}
+
+function renderPBGrid(){
+  const pbs=getPBs();const grid=document.getElementById('pb-grid');if(!grid)return;
+  const allLifts=[...DEFAULT_LIFTS,...Object.keys(pbs).filter(k=>!DEFAULT_LIFTS.find(l=>l.name===k)).map(k=>({id:k,name:k,icon:'⚡'}))];
+  grid.innerHTML=allLifts.map(lift=>{
+    const pb=pbs[lift.name];
+    if(!pb)return`<div class="pb-card" onclick="selectAndOpenPB('${lift.name}')"><div class="pb-card-icon">${lift.icon}</div><div class="pb-card-name">${lift.name}</div><div class="pb-card-weight" style="color:var(--text3);font-size:16px;">Tap to log</div></div>`;
+    const lbs=Math.round(pb.weight*2.205*10)/10;
+    const d=new Date(pb.date);
+    const historyText=pb.history&&pb.history.length>1?`↑ from ${pb.history[pb.history.length-2].weight}kg`:'First entry';
+    return`<div class="pb-card has-pb"><div class="pb-card-icon">${lift.icon}</div><div class="pb-card-name">${lift.name}</div><div class="pb-card-weight">${pb.weight}<span class="pb-card-unit">kg</span></div><div class="pb-card-date">${lbs} lbs · ${pb.reps} rep${pb.reps!==1?'s':''}</div><div class="pb-card-history">${historyText}</div><div class="pb-new-badge">PB</div></div>`;
+  }).join('');
+}
+
+window.selectAndOpenPB=function(name){openAddPBSheet();setTimeout(()=>document.getElementById('pb-exercise-name').value=name,100);}
+
+function celebratePR(name,weight){
+  document.getElementById('pr-exercise-name').textContent=name;
+  document.getElementById('pr-weight-display').textContent=weight+'kg';
+  document.getElementById('pr-celebration').style.display='flex';
+}
+window.closePRCelebration=function(){document.getElementById('pr-celebration').style.display='none';}
+
+// Auto-detect PR during workout
+function checkWorkoutForPRs(){
+  const pbs=getPBs();let newPRs=[];
+  currentWorkout.forEach(ex=>{
+    const maxWeight=Math.max(...ex.sets.filter(s=>s.done&&s.weight).map(s=>parseFloat(s.weight)||0));
+    if(maxWeight>0){
+      const prev=pbs[ex.name];
+      if(!prev||maxWeight>prev.weight){
+        const reps=ex.sets.filter(s=>s.done&&parseFloat(s.weight)===maxWeight)[0]?.reps||1;
+        pbs[ex.name]={weight:maxWeight,reps:parseInt(reps)||1,unit:workoutUnit,date:new Date().toISOString(),history:[...(prev?.history||[]),{weight:maxWeight,reps,date:new Date().toISOString()}].slice(-20)};
+        newPRs.push({name:ex.name,weight:maxWeight});
+      }
+    }
+  });
+  if(Object.keys(pbs).length)savePBs(pbs);
+  if(newPRs.length>0)setTimeout(()=>celebratePR(newPRs[0].name,newPRs[0].weight),500);
+}
+
+// ===== MACRO CALCULATOR =====
+window.calculateMacros=function(){if(!document.getElementById('calc-height').value){document.getElementById('calc-height').value=getGoals().height||175;}if(!document.getElementById('calc-weight').value){const log=getWeightLog();if(log.length)document.getElementById('calc-weight').value=log[log.length-1].kg;}
+  const age=parseInt(document.getElementById('calc-age').value)||25;
+  const weight=parseFloat(document.getElementById('calc-weight').value)||75;
+  const height=parseInt(document.getElementById('calc-height').value)||175;
+  const gender=document.getElementById('calc-gender').value;
+  const activity=parseFloat(document.getElementById('calc-activity').value)||1.55;
+  const goal=document.getElementById('calc-goal').value;
+  // Mifflin-St Jeor
+  let bmr;
+  if(gender==='male')bmr=10*weight+6.25*height-5*age+5;
+  else bmr=10*weight+6.25*height-5*age-161;
+  let tdee=Math.round(bmr*activity);
+  if(goal==='cut')tdee-=500;
+  else if(goal==='bulk')tdee+=300;
+  const protein=Math.round(weight*2.2); // 2.2g per kg
+  const fat=Math.round(tdee*0.25/9);
+  const carbs=Math.round((tdee-protein*4-fat*9)/4);
+  document.getElementById('cr-kcal').textContent=tdee+' kcal';
+  document.getElementById('cr-protein').textContent=protein+'g';
+  document.getElementById('cr-carbs').textContent=carbs+'g';
+  document.getElementById('cr-fat').textContent=fat+'g';
+  document.getElementById('calc-result').style.display='block';
+  // Apply to goals
+  document.getElementById('goal-kcal').value=tdee;
+  document.getElementById('goal-carbs').value=carbs;
+  document.getElementById('goal-protein').value=protein;
+  document.getElementById('goal-fat').value=fat;
+  saveGoals();
+  showToast('Macros calculated & applied ✓',true);
+}
+
+// ===== WEEKLY REPORT =====
+function renderWeeklyReport(){
+  const el=document.getElementById('weekly-report');if(!el)return;
+  const goals=getGoals();const today=new Date();let totalKcal=0,daysLogged=0,totalProtein=0,totalWorkouts=0;
+  for(let i=6;i>=0;i--){
+    const d=new Date(today);d.setDate(d.getDate()-i);
+    const raw=localStorage.getItem('ff_day_'+currentUser?.uid+'_'+d.toISOString().slice(0,10));
+    if(raw){const day=JSON.parse(raw);const t=totals(day);totalKcal+=t.kcal-t.ex;totalProtein+=t.protein;daysLogged++;}
+  }
+  const workouts=JSON.parse(localStorage.getItem('ff_workouts_'+currentUser?.uid)||'[]');
+  const thisWeekWorkouts=workouts.filter(w=>{const d=new Date(w.date);const diff=(today-d)/(1000*60*60*24);return diff<=7;});
+  const avgKcal=daysLogged?Math.round(totalKcal/daysLogged):0;
+  const avgProtein=daysLogged?Math.round(totalProtein/daysLogged):0;
+  const streak=calcStreak();
+  const pbs=getPBs();const pbCount=Object.keys(pbs).length;
+  el.innerHTML=`
+    <div class="report-title">📊 This Week's Stats</div>
+    <div class="report-stat-row"><span class="report-stat-label">📅 Days logged</span><span class="report-stat-val">${daysLogged}/7</span></div>
+    <div class="report-stat-row"><span class="report-stat-label">🔥 Avg calories</span><span class="report-stat-val">${avgKcal} kcal</span></div>
+    <div class="report-stat-row"><span class="report-stat-label">💪 Avg protein</span><span class="report-stat-val">${avgProtein}g</span></div>
+    <div class="report-stat-row"><span class="report-stat-label">🏋️ Workouts done</span><span class="report-stat-val">${thisWeekWorkouts.length}</span></div>
+    <div class="report-stat-row"><span class="report-stat-label">🔥 Current streak</span><span class="report-stat-val">${streak} days</span></div>
+    <div class="report-stat-row"><span class="report-stat-label">🏆 Personal bests</span><span class="report-stat-val">${pbCount} tracked</span></div>
+  `;
+}
+
+// ===== FRIENDS / SOCIAL =====
+function generateFriendCode(uid){
+  // Generate deterministic 6-char code from uid
+  const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let code='';for(let i=0;i<6;i++)code+=chars[uid.charCodeAt(i%uid.length)%chars.length];
+  return code;
+}
+
+function renderFriendsScreen(){
+  if(!currentUser)return;
+  const code=generateFriendCode(currentUser.uid);
+  document.getElementById('my-friend-code').textContent=code;
+  // Load friends
+  const friends=JSON.parse(localStorage.getItem('ff_friends_'+currentUser.uid)||'[]');
+  const friendsList=document.getElementById('friends-list');
+  const leaderboard=document.getElementById('leaderboard');
+  // Build leaderboard with self + friends
+  const me={name:currentUser.displayName?.split(' ')[0]||'Me',streak:calcStreak(),isMe:true};
+  const allUsers=[me,...friends];
+  allUsers.sort((a,b)=>b.streak-a.streak);
+  const medals=['🥇','🥈','🥉'];
+  leaderboard.innerHTML=`<div class="leaderboard-header">🔥 Streak Rankings</div>`+allUsers.map((u,i)=>`<div class="leaderboard-row"><div class="leaderboard-pos ${i===0?'gold':i===1?'silver':i===2?'bronze':''}">${medals[i]||i+1}</div><div class="leaderboard-name">${u.name}${u.isMe?' (You)':''}</div><div class="leaderboard-val">${u.streak} days</div></div>`).join('');
+  if(!friends.length){friendsList.innerHTML=`<div style="text-align:center;padding:32px;color:var(--text3);"><div style="font-size:40px;margin-bottom:12px;">👥</div><div style="font-weight:700;">No friends yet</div><div style="font-size:13px;margin-top:6px;">Share your code above to connect!</div></div>`;return;}
+  friendsList.innerHTML=friends.map(f=>`<div class="friend-card"><div class="friend-avatar">${f.name[0].toUpperCase()}</div><div><div class="friend-name">${f.name}</div><div class="friend-stats">Code: ${f.code}</div></div><div class="friend-streak">🔥 ${f.streak}<div style="font-size:10px;color:var(--text3);">day streak</div></div></div>`).join('');
+}
+
+window.copyFriendCode=function(){
+  const code=document.getElementById('my-friend-code').textContent;
+  if(navigator.clipboard)navigator.clipboard.writeText('My FitForge code: '+code);
+  showToast('Code copied! Share with friends 📋',true);
+}
+
+window.addFriend=function(){
+  const input=document.getElementById('friend-code-input');
+  const code=input.value.trim().toUpperCase();
+  if(code.length!==6){showToast('Enter a valid 6-character code');return;}
+  const myCode=generateFriendCode(currentUser.uid);
+  if(code===myCode){showToast("That's your own code!");return;}
+  const friends=JSON.parse(localStorage.getItem('ff_friends_'+currentUser.uid)||'[]');
+  if(friends.find(f=>f.code===code)){showToast('Already added!');return;}
+  // Add friend with placeholder data (in a real app this would query Firebase)
+  friends.push({name:'Friend',code,streak:0,joined:new Date().toISOString()});
+  localStorage.setItem('ff_friends_'+currentUser.uid,JSON.stringify(friends));
+  input.value='';
+  renderFriendsScreen();
+  showToast('Friend added! 🤝',true);
+}
+
+// ===== SMART NOTIFICATIONS =====
+function setupSmartNotifications(){
+  if(!('Notification'in window))return;
+  if(Notification.permission==='default')Notification.requestPermission();
+  // Check every 30 minutes
+  setInterval(checkAndNotify,30*60*1000);
+  checkAndNotify();
+}
+
+function checkAndNotify(){
+  if(Notification.permission!=='granted'||!currentUser)return;
+  const now=new Date();const hour=now.getHours();const day=getDay(0);const goals=getGoals();const t=totals(day);
+  // Water reminder at 2pm if under half goal
+  if(hour===14&&day.water<Math.floor(goals.water/2))notify('💧 Water reminder',`You've only had ${day.water} of ${goals.water} cups today. Stay hydrated!`);
+  // Protein reminder at 7pm
+  if(hour===19){const proteinLeft=Math.max(0,goals.protein-Math.round(t.protein));if(proteinLeft>15)notify('💪 Protein reminder',`You need ${proteinLeft}g more protein to hit your goal tonight!`);}
+  // Calorie check at 8pm
+  if(hour===20){const remain=goals.kcal-(t.kcal-t.ex);if(remain>200)notify('🍽️ Meal reminder',`You have ${Math.round(remain)} calories left today. Don't forget to log!`);}
+  // Streak reminder at 9pm if nothing logged today
+  if(hour===21&&t.kcal<50)notify('🔥 Streak at risk!',`Log your meals to keep your ${calcStreak()} day streak alive!`);
+}
+
+function notify(title,body){
+  try{new Notification(title,{body,icon:'⚡',badge:'⚡'});}catch(e){}
+}
+
+// Weekly report notification every Sunday at 9am
+function scheduleWeeklyReport(){
+  const now=new Date();const isSunday=now.getDay()===0;const hour=now.getHours();
+  if(isSunday&&hour===9&&Notification.permission==='granted'){
+    const goals=getGoals();let totalKcal=0,daysLogged=0;
+    for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const raw=localStorage.getItem('ff_day_'+currentUser?.uid+'_'+d.toISOString().slice(0,10));if(raw){const day=JSON.parse(raw);const t2=totals(day);totalKcal+=t2.kcal;daysLogged++;}}
+    const avg=daysLogged?Math.round(totalKcal/daysLogged):0;
+    notify('📊 Weekly FitForge Report',`This week: ${daysLogged} days logged, avg ${avg} kcal/day. Streak: ${calcStreak()} days 🔥`);
+  }
+  setTimeout(scheduleWeeklyReport,60*60*1000); // check every hour
+}
+
 document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))document.getElementById('autocomplete-list').style.display='none';});
 </script>
 </body>
